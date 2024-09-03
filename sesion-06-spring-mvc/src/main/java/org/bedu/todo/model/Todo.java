@@ -1,11 +1,27 @@
 package org.bedu.todo.model;
 
 public class Todo {
-    
-    // id
-    // titulo de la tarea
+
+    private int id;
+    private String title;
     private String description;
-    // si esta completada
+    private boolean completed;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
     public String getDescription() {
         return description;
@@ -13,5 +29,13 @@ public class Todo {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public boolean isCompleted() {
+        return completed;
+    }
+
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
     }
 }

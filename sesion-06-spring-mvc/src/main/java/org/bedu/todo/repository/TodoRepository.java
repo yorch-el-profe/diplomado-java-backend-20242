@@ -13,6 +13,7 @@ import org.springframework.stereotype.Repository;
 public class TodoRepository {
     
     private ArrayList<Todo> data = new ArrayList<>();
+    private int currentId = 0;
 
 
     public int size() {
@@ -20,6 +21,9 @@ public class TodoRepository {
     }
 
     public void save(Todo todo) {
+        todo.setId(++currentId);
+        todo.setCompleted(false);
+        
         data.add(todo);
     }
 }
