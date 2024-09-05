@@ -23,4 +23,12 @@ public class TodoController {
         // Redirigir a la vista principal
         return "redirect:/";
     }
+
+    @PostMapping("completar")
+    public String complete(@ModelAttribute("id") int id) {
+
+        repository.complete(id);
+
+        return "redirect:/";
+    }
 }

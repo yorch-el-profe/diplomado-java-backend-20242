@@ -30,4 +30,15 @@ public class TodoRepository {
         
         data.add(todo);
     }
+
+    public void complete(int id) {
+        for (int i = 0; i < data.size(); i++) {
+            Todo current = data.get(i);
+
+            if (current.getId() == id) {
+                current.setCompleted(true);
+                break;
+            }
+        }
+    }
 }
