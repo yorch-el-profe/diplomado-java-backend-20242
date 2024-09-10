@@ -1,0 +1,3 @@
+.is-completed .card-title, .is-completed .card-text {
+    text-decoration: line-through;
+}
