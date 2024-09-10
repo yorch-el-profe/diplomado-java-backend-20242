@@ -15,11 +15,11 @@
             <form class="col-lg-6 col-md-8" th:object="${todo}" method="post" th:action="@{/guardar}">
                 <div class="mb-3">
                     <label for="exampleInput" class="form-label">Título de la tarea</label>
-                    <input type="text" class="form-control" id="exampleInput" th:field="*{title}" />
+                    <input type="text" class="form-control" id="exampleInput" th:field="*{title}" required />
                 </div>
                 <div class="mb-3">
                     <label for="exampleInput" class="form-label">¿Cuál es la tarea a realizar?</label>
-                    <input type="text" class="form-control" id="exampleInput" th:field="*{description}" />
+                    <input type="text" class="form-control" id="exampleInput" th:field="*{description}" required />
                 </div>
                 <button type="submit" class="btn btn-primary">Guardar</button>
                 <a href="/" class="btn btn-secondary">Cancelar</a>

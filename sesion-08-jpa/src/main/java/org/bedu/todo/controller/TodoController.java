@@ -31,4 +31,12 @@ public class TodoController {
 
         return "redirect:/";
     }
+
+    @PostMapping("eliminar")
+    public String delete(@ModelAttribute("id") int id) {
+
+        repository.deleteById(id);
+
+        return "redirect:/";
+    }
 }

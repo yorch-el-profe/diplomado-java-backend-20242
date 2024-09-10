@@ -20,10 +20,11 @@
                     <div class="d-flex justify-content-between">
                         <form method="post" th:action="@{/completar}" th:if="${!t.completed}">
                             <input type="hidden" name="id" th:attr="value=${t.id}" />
-                            <button class="btn btn-primary btn-sm">Completar</button>
+                            <button type="submit" class="btn btn-primary btn-sm">Completar</button>
                         </form>
-                        <form>
-                            <button class="btn btn-danger btn-sm">Eliminar</button>
+                        <form method="post" th:action="@{/eliminar}">
+                            <input type="hidden" name="id" th:attr="value=${t.id}" />
+                            <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
                         </form>
                     </div>
                 </div>
